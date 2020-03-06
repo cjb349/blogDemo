@@ -51,8 +51,12 @@ const User = mongoose.model("User", userSchema)
 app.get('/', (req, res)=> {
 
   User.find({}, (err, foundUsers) => {
-    console.log(foundUsers)
-    }) 
+    if(err){
+      console.log("HIT AN ERROR: "+err)
+    } else{
+      console.log("FOUND USERS!!!!! " +foundUsers)
+    }
+    } ) 
     
   res.render('home', {
     homeStartingContent,
