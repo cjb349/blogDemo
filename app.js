@@ -51,13 +51,7 @@ const User = mongoose.model("User", userSchema)
 app.get('/', (req, res)=> {
 
   User.find({}, (err, foundUsers) => {
-        if(users.length !== 0){
-          users
-        } else{
-          foundUsers.forEach(user => {
-            users.push(user.firstName)
-        })
-      }
+    console.log(foundUsers)
     }) 
     
   res.render('home', {
