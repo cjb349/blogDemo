@@ -38,13 +38,13 @@ const userSchema = {
 
 const User = mongoose.model("User", userSchema)
 
-User.once('index', err => {assert.ifError(err);
+// User.once('index', err => {assert.ifError(err);
 
-User.create({
-  firstName: 'Kristen',
-  lastName: 'Breslin'
-}, (err) => console.log(err))
-});
+// User.create({
+//   firstName: 'Kristen',
+//   lastName: 'Breslin'
+// }, (err) => console.log(err))
+// });
 
 
 //ROUTES
